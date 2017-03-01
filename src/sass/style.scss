@@ -40,7 +40,8 @@ $color-primary-active:		$color-green-72; /* Dark */
 html {}
 
 body {
-	font: 300 1em / 1.5em 'Merriweather Sans', sans-serif;
+	// font: 300 1em / 1.5em 'Merriweather Sans', sans-serif;
+	font: 300 1em / 1.5em 'HanHei SC', 'PingFang SC', "Microsoft YaHei","Source Han Sans CN",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
 	color: $color-gray-40;
 }
 
@@ -555,6 +556,11 @@ body {
 	transform-style: preserve-3d;
 	opacity: 1;
 
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
 	&:after {
 		clear: both;
 		content: '';
@@ -587,7 +593,40 @@ body {
 		}
 	}
 
+	.nav-menu-list {
+		float: right;
+		width: auto;
+		margin: 0;
+		padding: 0;
+		font-size: 0px;
+		list-style: none;
+		li.nav-menu-item {
+			display: inline-block;
+			height: 4rem;
+			line-height: 4rem;
+			font-size: 16px;
+			padding:0 20px;
+			box-size: border-box;
+			a{
+				display: block;
+				font-weight: 200;
+				transition: 0.3s;
+				&:hover{
+					color: $color-green-72;
+				}
+			}
+			&:before{
+				content: none;
+			}
+		}
+
+		@media only screen and (max-width: $breakpoint-phone) {
+			display: none;
+		}
+	}
+
 	.nav-menu {
+		display: none;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -621,6 +660,10 @@ body {
 		.rss {}
 
 		.menu {}
+
+		@media only screen and (max-width: $breakpoint-phone) {
+			display: block;
+		}
 	}
 }
 
@@ -1127,11 +1170,13 @@ body {
 .post {
 	position: relative;
 	z-index: 20;
+	word-wrap: break-word;
 
 	.post-image {
 		display: block;
 		margin: 0;
 		padding: 0;
+		max-height: 300px;
 
 		img {
 			display: block;
@@ -1506,6 +1551,13 @@ body {
 	.post-share {
 		float: right;
 
+		// 百度分享
+		.bdsharebuttonbox{
+			a{
+				transition:none;
+			}
+		}
+
 		a {
 			font-size: 0.75em;
 			display: block;
@@ -1519,7 +1571,7 @@ body {
 			float: left;
 			border-radius: 2px;
 			color: #fff;
-			background: $color-gray-50;
+			// background: $color-gray-50;
 
 			&:hover,
 			&:focus {
@@ -1992,7 +2044,7 @@ body {
 				font-size: 1.5em;
 			}
 
-			> span {
+			& > span {
 				display: none;
 			}
 		}

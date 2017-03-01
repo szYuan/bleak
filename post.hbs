@@ -27,7 +27,7 @@
 				</div>
 				
 				<div class="post-share">
-					<a class="icon-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+					{{!--<a class="icon-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 						<span>Twitter</span>
 					</a>
 					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
@@ -35,7 +35,32 @@
 					</a>
 					<a class="icon-gplus" href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
 						<span>Google+</span>
-					</a>
+					</a>--}}
+					{{! 使用百度分享(http://share.baidu.com/)}}
+					<div class="bdsharebuttonbox" data-tag="share_1">
+						<a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+						<a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+						<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+						<a href="#" class="bds_more" data-cmd="more"></a>
+					</div>
+					<script>
+						window._bd_share_config={
+							"common":{
+								"bdSnsKey":{},
+								"bdText":"",
+								"bdMini":"2",
+								"bdMiniList":["qzone","douban","sqq","youdao","linkedin","evernotecn"],
+								"bdPic":"",
+								"bdStyle":"1",
+								"bdSize":"32"
+							},
+							"share":{}
+						};
+						with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+					</script>
+					{{! 百度分享代码结束}}
+
 				</div>
 				
 			</footer>

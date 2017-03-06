@@ -1,80 +1,41 @@
-# Bleak
+# Bleak-zh
 
-An elegant AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
+一个使用AJAX实现无缝切换效果的Ghost博客主题
 
 ***
 
-_**Hint:** This theme works with AJAX, so it won’t work with multiple domains properly! Use redirects to only one domain instead. Also make sure you haven’t jQuery injected in your footer due to [Ghosts migration method](http://dev.ghost.org/no-more-jquery/). This can break the layout!_
+_**Hint:** 这个主题基于AJAX，因此它可能无法在多域名下正常运行！想使用这个主题请使用单域名。另外需要确保你没有在Ghost的footer中注入jQuery依赖，参考[Ghosts migration method](http://dev.ghost.org/no-more-jquery/)，否则会破坏页面布局！
 
 ## Demo
 
-* [Blog](http://bleak.zutrinken.com)
-* [Post](http://bleak.zutrinken.com/demo)
-* [Tags](http://bleak.zutrinken.com/tag/general)
-* [Author](http://bleak.zutrinken.com/author/zutrinken)
+* [Blog](http://www.szy321.com)
 
-## Screenshots
+## 效果截图
 
 <table>
 <tr>
 <td valign="top">
-<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-desktop.jpg" />
+<!--<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-desktop.jpg" />-->
 </td>
 <td valign="top">
-<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-mobile.jpg" />
+<!--<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-mobile.jpg" />-->
 </td>
 </tr>
 </table>
 
-## Features
+## 功能特点
 
-* Responsive layout
-* Blog navigation
-* Post navigation
-* Cover images for blog, tag and author archives
-* Featured posts style
-* Automatic code syntax highlight and line numbers
-* Disqus support
-* Subscribers support
-* Sharing buttons
+* 响应式布局
+* 自带代码高亮与行数显示
+* 支持Disqus
+* 分享按钮（使用百度分享）
+* 支持订阅
 
-## Setup
+## 开发
 
-To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
-
-## Development
-
-Install [Grunt](http://gruntjs.com/getting-started/):
-
-	npm install -g grunt-cli
-
-Install Grunt modules:
-
-	npm install
-
-Install [Bower](http://bower.io):
-
-	npm install -g bower
-
-Install Bower components:
-
-	bower install
-
-Build Grunt project:
-
-	grunt
-
-Distribute Grunt project:
-
-	grunt build
+使用Grunt
 
 ## Copyright & License
 
+Fork自Peter Amende的Bleak项目，根据个人需要进行了大量修改，设置和优化。并进行了必要的汉化
 Copyright (C) 2015-2017 Peter Amende - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

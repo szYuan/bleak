@@ -4,7 +4,7 @@
 
 ***
 
-_**Hint:** 这个主题基于AJAX，因此它可能无法在多域名下正常运行！想使用这个主题请使用单域名。另外需要确保你没有在Ghost的footer中注入jQuery依赖，参考[Ghosts migration method](http://dev.ghost.org/no-more-jquery/)，否则会破坏页面布局！
+_**提示:** 这个主题基于AJAX，因此它可能无法在多域名下正常运行！想使用这个主题请使用单域名。另外需要确保你没有在Ghost的footer中注入jQuery依赖，参考[Ghosts migration method](http://dev.ghost.org/no-more-jquery/)，否则会破坏页面布局！_
 
 ## Demo
 

@@ -42,7 +42,6 @@
 						<a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
 						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
 						<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-						<a href="#" class="bds_more" data-cmd="more"></a>
 					</div>
 					<script>
 						window._bd_share_config={
@@ -52,7 +51,7 @@
 								"bdMini":"2",
 								"bdMiniList":["qzone","douban","sqq","youdao","linkedin","evernotecn"],
 								"bdPic":"",
-								"bdStyle":"1",
+								"bdStyle":"2",
 								"bdSize":"32"
 							},
 							"share":{}
@@ -134,8 +133,11 @@
 				{{/prev_post}}
 				<div class="clear"></div>
 			</nav>
-
 			{{/post}}
+
+			{{!--评论模块--}}
+			{{> "comment"}}
 		</div>
 	</article>
+
 </main>

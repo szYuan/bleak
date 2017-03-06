@@ -4,6 +4,7 @@
 
 @import "fonts";
 @import "icons";
+@import "hack";
 
 $breakpoint-phone:		30em;
 $breakpoint-tablet:		50em;
@@ -512,6 +513,13 @@ body {
 	transform: translate3d(0,0,0);
 	transform-style: preserve-3d;
 	opacity: 1;
+	
+	&:after {
+		content: '';
+		display: block;
+		height: 0;
+		clear: both;
+	}
 }
 
 .push-next {
@@ -548,13 +556,18 @@ body {
    ========================================================================== */
 
 #nav {
-	position: relative;
-	background: #fff;
-	z-index: 70;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	z-index: 100;
 	transition: all ease-out 0.4s;
 	transform: translate3d(0,0,0);
 	transform-style: preserve-3d;
 	opacity: 1;
+	background-color: rgba(255,255,255,0.7);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 
 	.nav-content {
 		max-width: 1200px;
@@ -664,6 +677,16 @@ body {
 		@media only screen and (max-width: $breakpoint-phone) {
 			display: block;
 		}
+	}
+
+	#nav-blur-cover {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		-webkit-backdrop-filter: blur(6px);
 	}
 }
 
@@ -919,7 +942,8 @@ body {
 
 #header {
 	position: relative;
-	padding: 4em 0;
+	// padding: 4em 0;
+	padding: 13em 0;
 
 	.inner {
 		position: relative;
@@ -1171,6 +1195,8 @@ body {
 	position: relative;
 	z-index: 20;
 	word-wrap: break-word;
+	//由于nav为fixed
+	padding-top: 64px;
 
 	.post-image {
 		display: block;
@@ -1277,6 +1303,7 @@ body {
 	.post {
 		float: left;
 		width: 33.30%;
+		padding-top: 0px;
 
 		@media only screen and (max-width: $breakpoint-tablet) {
 			width: 49.90%;

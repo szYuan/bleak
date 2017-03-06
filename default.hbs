@@ -20,6 +20,7 @@
 	<section id="wrapper">
 		<div id="ajax-container">
 			<nav id="nav" class="nav">
+				<div id="nav-blur-cover"></div>
 				<div class="nav-content">
 					<div class="nav-logo">
 						<a href="{{@blog.url}}">
@@ -33,7 +34,7 @@
 					<ul class="nav-menu-list">
 						{{#foreach @blog.navigation}}
 						<li class="nav-menu-item">
-							<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+							<a class="{{slug}}{{#if current}} current{{/if}}" href="{{this.url}}">{{label}}</a>
 						</li>
 						{{/foreach}}
 					</ul>
